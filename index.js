@@ -144,8 +144,6 @@ function cumlelereDonustur(cumlelerDizisi,boslukParametresi) {
     return test.join(boslukParametresi)
   })
   return mapleCozum
-
-
 }
 console.log(cumlelereDonustur(cumleler," "))
 
@@ -156,15 +154,25 @@ console.log(cumlelereDonustur(cumleler," "))
 			3. cumlelereDonustur fonksiyonu geriçağırım(callback) için fonksiyonun üçüncü parametresi olarak alınacak
 			4. Bir dizi oluşturulacak ve cumlelereDonustur fonksiyonu cumleler ve " " ayracıyla çağırılarak bu
          diziye aktarılacak
-			5. Oluşturulan bu dizinin tek sayılı anahtarlarını(index) [1,3,5,7,9] kullanarak ilk 5 elemanı geriçağırım 
-         olarak çağırılan cumleKur dizisinin parametreleri olarak aktarılarak çağırılacak ÖRNEK: 
-         callback(dizi[1],dizi[2],dizi[3],dizi[5],dizi[7])
+			5. Oluşturulan bu dizinin tek sayılı anahtarlarını(index) [1,3,5,7,9] kullanarak ilk 5 elemanı callback 
+         olarak çağırılan cumleKur dizisinin parametreleri olarak aktarılarak çağırılacak 
+         ÖRNEK: 
+         callback(dizi[1],dizi[3],dizi[5],dizi[7],dizi[9])
 			6. Oluşturulan paragraf döndürülecek
 	*/
 
-function paragrafOlustur(/* kodlar buraya */) {
-  /* kodlar buraya */
-}
+  
+  function paragrafOlustur(cumlelerDizisi2,cbcumleKur,cbcumlelereDonustur) {
+    const gorev2Dizi = cbcumlelereDonustur(cumlelerDizisi2 , " ")
+    const b = gorev2Dizi.filter((element,index)=>{
+      if(index <= 9 && index % 2 == 1){
+        return cbcumleKur(element)
+      }
+    })
+    let a = b.join("")
+    return cumleKur(a)
+  }
+console.log(paragrafOlustur(cumleler,cumleKur,cumlelereDonustur))
 
 /* 	GÖREV 3:
 		Yukarıda isimleri sebzeler ve meyveler olan 2 dizi bulunmaktadır. Bu dizileri kullanarak aşağıdaki görevleri tamamlayın.
