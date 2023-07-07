@@ -220,9 +220,48 @@ manav = yeniMeyveler.concat(yeniSebzeler)
 			4. elde edilen string döndürülecek
  */
 
-function emojileriDonustur(/* kodlar buraya */) {
-  /* kodlar buraya */
-}
+      function emojileriDonustur(mesajParametresi,emojilerParametresi) {
+
+        for(let sembol in emojilerParametresi){
+          const emoji = emojilerParametresi[sembol];
+          const kucukSembol = sembol.toLowerCase();
+          const buyukSembol = sembol.toUpperCase();
+
+          mesajParametresi = mesajParametresi.split(kucukSembol).join(emoji)
+          mesajParametresi = mesajParametresi.split(buyukSembol).join(emoji)
+
+        }
+
+          return mesajParametresi
+       
+       }
+       console.log(emojileriDonustur("Selam :) Nasılsın :d Bugünkü olay çok komikti :p ama sonra çok şaşırdık :o biraz da üzüldük :( ama yine de seviliyorsun <3",emojiler))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 function sa() {
