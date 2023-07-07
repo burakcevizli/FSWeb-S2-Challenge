@@ -165,10 +165,7 @@ console.log(cumlelereDonustur(cumleler," "))
   function paragrafOlustur(cumlelerDizisi2,cbcumleKur,cbcumlelereDonustur) {
     const gorev2Dizi = cbcumlelereDonustur(cumlelerDizisi2 , " ")
     const b = gorev2Dizi.filter((element,index)=>{
-      if(index <= 9 && index % 2 == 1){
-        return cbcumleKur(element)
-      }
-    })
+    if(index <= 9 && index % 2 == 1){return cbcumleKur(element)}})
     let a = b.join("")
     return cumleKur(a)
   }
@@ -179,7 +176,8 @@ console.log(paragrafOlustur(cumleler,cumleKur,cumlelereDonustur))
 			3a. meyveler dizisinin ilk ve son elemanlarını diziden çıkartın. (.pop ve .shift metodlarını kullanın)
  */
 //3a çözümü
-/* kodlar buraya */
+meyveler.pop()
+meyveler.shift()
 
 /* 			3b.  Bir tavşan ve bir kirpi arkadaşlar sebzeler dizimizin peşine düştü. Tavşan => 🐇 , Kirpi=> 🦔 , 
 Tavşanla kirpi sebzeleri ele geçirmek için bir plan kurdular. Tavşan diziye önden saldıracak, kirpi ise 
@@ -187,15 +185,23 @@ arkalarından dolaşacak. Varsayalım ki arkadaşların planları başarılı ol
 Kirpiyi dizinin son elemanına ekleyin 🦔
  */
 //3b çözümü
-/* kodlar buraya */
+sebzeler.unshift("🐇")
+sebzeler.push("🦔")
 
 /* 			3c. manav isminde bir dizi oluşturun.`meyveler` dizisi ilk elemanlara, `sebzeler` dizisi son 
 elemanlara denk gelecek şekilde, iki diziyi birleştirip sonucu manav dizisine aktarın. (.concat metodu)
  */
 //3c çözümü
-/* kodlar buraya */
+
 
 var manav;
+
+manav = []
+
+const yeniSebzeler = sebzeler;
+const yeniMeyveler = meyveler;
+
+manav = yeniMeyveler.concat(yeniSebzeler)
 
 /* 	GÖREV 4:
 		Yeni kurulmuş bir mesajlaşma startup firması atılan mesajları emojilerle zenginleştirmek istiyor. 
