@@ -133,9 +133,21 @@ console.log(bircumle = cumleKur("Ben ","iyi ","bir ","yazılımcı ","olacağım
 			5. Oluşturulan yeni dizi döndürülecek.
 	*/
 
-function cumlelereDonustur(/* kodlar buraya */) {
-  /* kodlar buraya */
+function cumlelereDonustur(cumlelerDizisi,boslukParametresi) {
+  // const a = []
+  // for(let i = 0; i < cumlelerDizisi.length; i++){
+  //     a.push(cumlelerDizisi[i].join(boslukParametresi))
+  // }
+  // return a;
+
+  const mapleCozum = cumlelerDizisi.map(test => {
+    return test.join(boslukParametresi)
+  })
+  return mapleCozum
+
+
 }
+console.log(cumlelereDonustur(cumleler," "))
 
 /* GÖREV 2:
 		paragrafOlustur fonksiyonuna aşağıdakileri uygulayın.
